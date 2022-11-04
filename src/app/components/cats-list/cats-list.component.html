@@ -1,0 +1,20 @@
+<div class="cats-list">
+  <div
+    class="cats-list__loader"
+    *ngIf="isLoading">
+    <mat-spinner color="primary"></mat-spinner>
+  </div>
+
+  <ul class="cats-list__list">
+    <li
+      class="cats-list__item"
+      *ngFor="let cat of cats"
+    >
+      <img
+        class="cats-list__image"
+        [src]="cat.url"
+        [alt]="cat.id"
+      >
+    </li>
+  </ul>
+</div>

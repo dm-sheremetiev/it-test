@@ -1,0 +1,34 @@
+<div class="cats-filter">
+  <label class="cats-filter__label">
+    Enter the breed of cats:
+    <select
+      [formControl]="breed"
+      class="cats-filter__input"
+      [value]="breed"
+    >
+      <option>All</option>
+      <option
+        *ngFor="let breed of breeds"
+      >
+        {{breed.name}}
+      </option>
+    </select>
+  </label>
+
+  <label class="cats-filter__label">
+    Enter cat`s list limit (10 by default):
+    <input
+      type="number"
+      [formControl]="limit"
+      class="cats-filter__input"
+    >
+  </label>
+
+  <button
+    class="cats-filter__submit-button"
+    [disabled]="isLoading"
+    (click)="applyChanges()">
+
+    Submit changes
+  </button>
+</div>

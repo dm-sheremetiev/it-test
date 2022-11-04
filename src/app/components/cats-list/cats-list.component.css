@@ -1,0 +1,21 @@
+.cats-list {
+  position: relative;
+}
+
+.cats-list__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.cats-list__loader {
+  display: flex;
+  justify-content: center;
+}
+
+.cats-list__image {
+  width: 300px;
+  height: 300px;
+}
